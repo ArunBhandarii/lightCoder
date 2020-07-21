@@ -23,9 +23,16 @@ sublist3r -d $1 -v -o domains.txt
 sort -u domains.txt -o domains.txt
 
 #checking for alive domains
-echo "[+] Checking for alive domains.."
+echo "[+] Checking for alive domains..."
 cat domains.txt | ~/go/bin/httprobe | tee -a final.txt
 
-echo "Adding more features...."
-echo "-----More Features coming soon------"
+echo "[+] Testing for PUT upload method against all the hosts..."
+
+for domain in $(cat final.txt)
+do
+ curl -s -o /dev/null -w "URL: %{url_effective} - Response: %{response_code}\n" -X PUT -d "hello world"  "${domain}/evil.txt"
+done > put.txt
+
+# echo "Adding more features...."
+# echo "-----More Features coming soon------"
 
