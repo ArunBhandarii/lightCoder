@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Automate 
+# Automate most of the pentest works.
 
 #starting sublist3r
 sublist3r -d $1 -v -o domains.txt
