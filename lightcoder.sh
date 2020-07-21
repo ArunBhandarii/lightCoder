@@ -15,7 +15,7 @@ sort -u domains.txt -o domains.txt
 echo "[+] Checking for alive domains.."
 cat domains.txt | ~/go/bin/httprobe | tee -a final.txt
 
-echo "Converting to ip addresses"
-echo "-------------------------"
+echo "Adding more features...."
+echo "-----More Features coming soon------"
 
 
