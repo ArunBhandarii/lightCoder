@@ -2,10 +2,13 @@
 
 # Automate the pentest and recon stuffs with this tool. 
 
-echo -e "
-+-+-+-+-+-+-+-+-+-+-+
-|L|I|G|H|T|C|O|D|E|R|
-+-+-+-+-+-+-+-+-+-+-+
+echo -e "                                                      
+ _     ___ ____ _   _ _____    ____ ___  ____  _____ ____  
+| |   |_ _/ ___| | | |_   _|  / ___/ _ \|  _ \| ____|  _ \ 
+| |    | | |  _| |_| | | |   | |  | | | | | | |  _| | |_) |
+| |___ | | |_| |  _  | | |   | |__| |_| | |_| | |___|  _ < 
+|_____|___\____|_| |_| |_|    \____\___/|____/|_____|_| \_\
+                                                           
 AUTHOR: Arun Bhandari"
         
 echo -e "RECON TOOL FOR PENETRATION TESTING"
@@ -105,10 +108,10 @@ do
  
 #looping through files in each domain
        
-	mkdir endpoints/$domain
-        for file in $(ls scriptsresponse/$domain)
-        do
-                ruby ~/relative-url-extractor/extract.rb scriptsresponse/$domain/$file >> endpoints/$domain/$file 
+mkdir endpoints/$domain
+for file in $(ls scriptsresponse/$domain)
+do
+        ruby ~/relative-url-extractor/extract.rb scriptsresponse/$domain/$file >> endpoints/$domain/$file 
         done
 done
 
