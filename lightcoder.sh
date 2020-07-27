@@ -119,6 +119,9 @@ echo "\e[31m[+] Screenshotting the alive sudomains\e[0m"
 
 cat final.txt | aquatone -out ~/$1/screenshots/
 
+echo "\e[31m[+] Screenshotting the alive sudomains using eyewitness\e[0m"
+eyewitness --web -f final.txt -d $1 
+
 # Nmap scans
 
 echo "\e[31m[+] Nmap scans..\e[0m"
