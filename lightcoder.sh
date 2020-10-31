@@ -53,8 +53,10 @@ do
 done > put.txt
 
 # CORS
+for i in $(cat final.txt);
+do
 assetfinder $1| httpx -threads 300 -follow-redirects -silent | rush -j200 'curl -m5 -s -I -H "Origin:evil.com" {} |  [[ $(grep -c "evil.com") -gt 0 ]] && printf "\n\033[0;32m[VUL TO CORS] - {}\e[m"' 2>/dev/null
-
+done > cors.txt
 
 #Data Collection
 echo "\e[31m[+] Storing subdomain headers and response bodies...\e[0m"
