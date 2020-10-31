@@ -52,6 +52,7 @@ do
  curl -s -o /dev/null -w "URL: %{url_effective} - Response: %{response_code}\n" -X PUT -d "hello world"  "${domain}/evil.txt"
 done > put.txt
 
+# CORS
 
 #Data Collection
 echo "\e[31m[+] Storing subdomain headers and response bodies...\e[0m"
