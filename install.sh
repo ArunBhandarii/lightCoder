@@ -6,7 +6,7 @@ echo -e "
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 AUTHOR: Lightcoder #Credits : KENT BAYRON @Kntx
 echo -e "INSTALLER FOR LIGHTCODER"
-echo "USAGE:./install.sh"
+echo "USAGE:./install.sh""
 
 #============================#
 # Install Dependencies [APT] #
